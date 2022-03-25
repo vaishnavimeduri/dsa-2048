@@ -12,18 +12,7 @@ import javax.swing.JPanel;
 
 
 
-/**
- * 
- * 2048 Puzzle Game - Houses the main method, most of the GUI methods and the
- * Key Interactions
- *
- * @author Pranay Tiru
- * @version May 23, 2020
- * @author Period: 5
- * @author Assignment: APCSFinal
- *
- * @author Sources: None
- */
+
 public class Game extends JPanel implements KeyListener
 {
     Board game = new Board();
@@ -37,10 +26,9 @@ public class Game extends JPanel implements KeyListener
     String gameBoard = game.toString();
 
 
-    /**
-     * 
-     * sets up the GUI with appropriate sizes and adds a Key Listener
-     */
+  
+     // sets up the GUI with appropriate sizes and adds a Key Listener
+     
     public static void setUpGUI()
     {
         frame.addKeyListener( newGame );
@@ -53,13 +41,7 @@ public class Game extends JPanel implements KeyListener
     }
 
 
-    /**
-     * Checks to see whether wasd or arrow keys are pressed and performs the
-     * appropriate actions - updates the JFrame with every move
-     * 
-     * @param e
-     *            KeyEvent to check
-     */
+    
     @Override
     public void keyPressed( KeyEvent e )
     {
@@ -117,13 +99,7 @@ public class Game extends JPanel implements KeyListener
     }
 
 
-    /**
-     * Paints the GUI with a series of strings, the board, the tiles and ensures
-     * they are repainted when the game is over
-     * 
-     * @param g
-     *            Graphics parameter
-     */
+    
     public void paint( Graphics g )
     {
         super.paint( g );
@@ -172,19 +148,7 @@ public class Game extends JPanel implements KeyListener
     }
 
 
-    /**
-     * 
-     * draws an individual tile - called from the paint method
-     * 
-     * @param g
-     *            Graphics parameter
-     * @param tile
-     *            Tile to draw
-     * @param x
-     *            X coordinate to draw at
-     * @param y
-     *            Y coordinate to draw at
-     */
+    
     public void drawTiles( Graphics g, Tile tile, int x, int y )
     {
         int tileValue = tile.getValue();
@@ -203,13 +167,7 @@ public class Game extends JPanel implements KeyListener
     }
 
 
-    /**
-     * 
-     * Main method - sets up the GUI and in turn starts the whole game
-     * 
-     * @param args
-     *            default parameter
-     */
+    
     public static void main( String[] args )
     {
         setUpGUI();

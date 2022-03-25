@@ -1,18 +1,7 @@
 import java.awt.Color;
 
 
-/**
- * 
- * Represents an individual tile in the game. Has an integer value and a color
- * value - both of which change as they are combined
- *
- * @author Pranay Tiru
- * @version May 23, 2020
- * @author Period: 5
- * @author Assignment: APCSFinal
- *
- * @author Sources: None
- */
+
 public class Tile
 {
     int value;
